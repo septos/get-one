@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views            #masukan link ke views.py
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('about', views.about),         #menuju link ke fungsi about
+    path('', views.homepage),           #menuju link ke fungsi homepage
 ]
