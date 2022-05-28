@@ -14,11 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.conf.urls import url, include
 from . import views            #masukan link ke views.py
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('about', views.about),         #menuju link ke fungsi about
-    path('', views.homepage),           #menuju link ke fungsi homepage
+    
+    url(r'^admin/', admin.site.urls),
+    url(r'^about/$', views.about),         #menuju link ke fungsi about
+    url(r'^$', views.homepage),           #menuju link ke fungsi homepage
+    #mendaftarkan app article pada url di settingan url utama
+    url(r'^articles/', include('articles.urls')),
+    
 ]
