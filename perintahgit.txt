@@ -1,0 +1,70 @@
+git revert 
+	untuk kembali ke kommit sebelumnya tetapi akan membentuk kommit baru dan menyimpan isi dari kommit yang dipilih
+
+git reset (nomor kommit)
+	untuk mereset atau menghapus kommit dari daftar dan tidak merubah isi. Tetapi isinya bisa di kommit lagi karena tidak berubah/
+
+git reset (nomor kommit) --hard
+	untuk mereset atau menghapus kommit ke daftar sesuai urutan kommit dan akan merubah isi permanen ke awal kommit 
+
+
+git log --oneline
+	menampilkan urutan nomor kommit
+git status
+	menampilkan status sudah masuk kemana
+	tahapan : modified, staging, kommit area
+
+--------
+perintah untuk menjalankan webserver django
+
+python manage.py runserver
+--------
+
+tahapan pada git
+modified | staging | commited
+
+--------
+cara memasukan ke staging area
+git add nama_file
+
+--------
+cara memasukan perubahan ke commited area
+git commit -m "komentar commit"
+
+
+
+--------
+berada di posisi branch feature-a kemudian akan melakukan copy semua dan dipindahkan branch feature-b menggunakan command
+
+git checkout -b feature-b
+
+sebelumnya perubahan harus sudah di add dan di commit 
+visualisasi nya sebagai berikut 
+[isi_branch_feature-a] 		dalam feature-a
+[isi_branch-feature-a]		dalam feature-b
+
+--------
+menggabungkan perubahan terhadap masing2 branch dan dimasukan ke dalam branch master, pertama git checkout dahulu ke utama(master)
+kemudian lakukan perintah merge agar file yang ada di branch lain bisa pindah/di import ke utama(master)
+
+git merge nama_branch
+
+visualisasinya sebagai berikut
+[isi_branch_master]		[isi_branch_namabranchyangditambahkan]
+						^
+________________________|
+
+
+--------
+setelah menambahkan semua fitur dari masing2 branch ke dalam branch master apabila ingin memindahkannya ke dalam branch baru atau branch lain.
+visualisasinya sebagai berikut
+
+[isi_branch_feature-a]---
+						|--> [isi_branch_master] ---> [isi_branch_feature-c]
+[isi_branch_feature-b]---
+
+git checkout -b feature-c
+
+
+--------
+ 
