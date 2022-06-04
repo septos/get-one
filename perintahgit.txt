@@ -68,3 +68,20 @@ git checkout -b feature-c
 
 --------
  
+melakukan push kepada respository jarak jauh di website git dengan sudah di buat manual dahulu repository nya, Berikut adalah perintah yang digunakan
+
+git remote add origin https://github.com/urljarakjauhwebsitegit.git
+
+--------
+
+melakukan upload jarak jauh kepada reposiory yang sudah di tunjuk / di remote sebelumnya
+
+git push origin (nama_branch)
+
+--------
+
+melakukan cloning jarak jauh dari website github agar bisa terus melakukan push pada lokasi yang sama
+
+git clone http://github.com/urldarigit.git
+
+-------- 
